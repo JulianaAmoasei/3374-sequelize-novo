@@ -37,8 +37,8 @@ class PessoaController {
     const { id } = req.params;
     const novasInfos = req.body;
     try {
-      const pessoaAtualizada = await this.pessoaService.atualizaPessoa(id, novasInfos);
-      return res.status(200).json(pessoaAtualizada);
+      const foiAtualizado = await this.pessoaService.atualizaPessoa(id, novasInfos);
+      return res.status(200).json({ atualizado: foiAtualizado });
     } catch (error) {
       return res.status(500).json(error.message);
     }
