@@ -8,6 +8,7 @@ const router = Router();
 const pessoaService = new PessoaService(dataSource);
 const pessoaController = new PessoaController(pessoaService);
 
-router.get("/pessoas", pessoaController.pegaTodasAsPessoas.bind(pessoaController));
+// router.get("/pessoas", pessoaController.pegaTodasAsPessoas.bind(pessoaController));
+router.get("/pessoas", (req, res) => pessoaController.pegaTodasAsPessoas(req, res));
 
 module.exports = router;
