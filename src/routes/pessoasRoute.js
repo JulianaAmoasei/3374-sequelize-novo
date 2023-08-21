@@ -9,10 +9,10 @@ const pessoaService = new PessoaService(dataSource);
 const pessoaController = new PessoaController(pessoaService);
 
 // router.get("/pessoas", pessoaController.pegaTodasAsPessoas.bind(pessoaController));
-router.get("/pessoas", (req, res) => pessoaController.pegaTodasAsPessoas(req, res));
-router.get("/pessoas/:id", (req, res) => pessoaController.pegaUmaPessoa(req, res));
-router.post("/pessoas", (req, res) => pessoaController.criaPessoa(req, res));
-router.put("/pessoas/:id", (req, res) => pessoaController.atualizaPessoa(req, res));
-router.delete("/pessoas/:id", (req, res) => pessoaController.excluiPessoa(req, res));
+router.get("/pessoas", (req, res) => pessoaController.pegaTodos(req, res));
+router.get("/pessoas/:id", (req, res) => pessoaController.pegaUm(req, res));
+router.post("/pessoas", (req, res) => pessoaController.criaNovo(req, res));
+router.put("/pessoas/:id", (req, res) => pessoaController.atualiza(req, res));
+router.delete("/pessoas/:id", (req, res) => pessoaController.exclui(req, res));
 
 module.exports = router;
