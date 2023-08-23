@@ -13,7 +13,7 @@ class Controller {
     }
   }
 
-  async pegaUm(req, res) {
+  async pegaUmPorId(req, res) {
     const { id } = req.params;
     try {
       const umRegistro = await this.entidadeService.pegaUmRegistroPorId(Number(id));
